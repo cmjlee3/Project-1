@@ -2,53 +2,74 @@ document.addEventListener("DOMContentLoaded", function(event) {
 console.log("game!");
 });
 
-$('#start').click(function(){
-  $(this).fadeOut('slow');
-  createBox();
-})
+var $score = 0;
+var $level = 1;
+var $lives = 3;
+var $playing = false;
 
-function createBox() {
-  var color = randomColor();
-  var k = Math.floor(Math.random() * ( 90 - 65 + 1 )) + 65;
-  var ch = String.fromCharCode(k);
-  var top = Math.floor(Math.random() * height );
-  var left = Math.floor(Math.random() * width );
-  $('body').append('<span class="bubb bubb'+ k +'" style="left: '+ left +'; top: '+ top +'; background-color:'+ color +'">'+ ch +'</span>');
-  setTimeout(createBox, 1000);
+var $button = ('#start');
+var $scoreDisplay = ('#score-display');
+var $cells = ('.cell');
+
+function displayScore() {
+    levelUp();
+    $scoreDisplay.text("Score: " + $score + "<span id='level-display'> Level: " + $level + "</span><span id='lifes-display'> Lives: " + lives + "</span>");
 }
 
-function randomColor(){
-var color = '';
-var values = ['a', 'b', 'c', 'd', 'e', 'f', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-for (c = 0; c < 6; c++)
-{
-no = Math.floor(Math.random() * 15);
-color += values[no];
+function levelUp() {
+    level = Math.max(Math.floor($score / 10), 1);
 }
-return color;
+
+function randomCell() {
+    return Math.floor(Math.random() * 16);
 }
-};
 
-(function makeDiv(){
-    var color = '#'+ Math.round(0xffffff * Math.random()).toString(16);
-    $newdiv = $('<div/>').css({
-        'width':divsize+'px',
-        'height':divsize+'px',
-        'background-color': color
-    });
+function gameOver() {
+    if ($lives === 0) {
+        clearInterval(getCells);
+        $score = 0;
+        $level = 1;
+        $lives = 5;
+        $playing = false;
+    }
+}
 
-    var posx = (Math.random() * ($(document).width() - divsize)).toFixed();
-    var posy = (Math.random() * ($(document).height() - divsize)).toFixed();
+function highlightCell() {
+    var $target = randomCell();
+    var $prevScore = score;
+    $cells[target].css('background', 'red');
+    setTimeout(function() {
+      $cells[target].css('background', 'black');
+        if ($score === $prevScore) {
+            $lives--;
+            displayScore();
+            gameOver();
+        }
+    }, 1000)
+}
 
-    $newdiv.css({
-        'position':'absolute',
-        'left':posx+'px',
-        'top':posy+'px',
-        'display':'none'
-    }).appendTo( 'body' ).fadeIn(400).delay(300).fadeOut(900,
+$('#button').click(function() {
+    if (!playing) {
+        playing = true;
+        displayScore();
+        getCells = setInterval(function() {
+            highlightCell();
+        }, 1500);
+    }
+});
 
-      function(){
-       // $(this).remove();
-       makeDiv();
-    });
-})();
+for (var i = 0; i < $cells.length; i++) {
+    $cells[i].on("click", function() {
+        if (playing) {
+            var $cell = this;
+            if (this.style.background === "pink") {
+                score++;
+            }
+            else {
+                $lives--;
+                gameOver();
+          }
+            displayScore();
+        }
+    })
+}
