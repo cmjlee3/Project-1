@@ -3,6 +3,7 @@ console.log("game!");
 
 // var $score=0
 
+// The function below allows the game to begin when the start button is clicked and then makes it so the button fades and is removed after that click. The function timed() is incorporated in order to start the game after the click.
 function clickCircle(){
    $('#start').click(function(){
     $('.button').fadeOut('3000');
@@ -13,6 +14,8 @@ function clickCircle(){
 
 clickCircle();
 
+
+// This function sets a time interval for a single div to be randomly selected and then randomly assigned a color at a rate of 1.1 seconds. The latter part makes it so that when this specific div is clicked it turns to white and also adds a point to the score but stops adding points after that one click to the specific dib has occured.
 function timed(){
   setInterval(function(){
     var $random = Math.floor(Math.random()* $('.circle').length);
@@ -25,12 +28,26 @@ function timed(){
       $('#score').html(function(i, val) { return +val+1 });
       $(this).off();
     });
-  },2000)
+  },1100)
 }
-// HOW DO I MAKE IT SO WHEN I PRESS START AGAIN IT DOESN'T DOUBLE
+
+// function anim(e){
+
+//   if(e.keyCode==32){
+//     redLeft +=20;
+//     document.getElementById('square1').style.left = redLeft + 'px';
+//     winner();
+//   }
+// }
+
+ // window.onkeydown = function() {
+ //            if (game.input.keyboard.event.keyCode == 32){
+ //                game.paused = !game.paused;
+ //            }
+ //        }
 // HOW DO I MAKE A PAUSE BUTTON
 // HOW DO I MAKE A COUNTER (COUNTDOWN) TO LOSE LIVES AND ALERT GAME OVER AFTER THREE LIVES LOST
-// HOW DO I ADD POINTS STARTING FROM 0,1,2 NOT 0, BLANK, 1
+  // HOW DO I ADD LEVELS
 
 
 
