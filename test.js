@@ -34,6 +34,7 @@ function timed(){
   }
   else if (clicker === 10){
     levelCounter++;
+    $('#levelNum').html(function(i, val) { return +val+1 })
     alert("Level " + levelCounter + ": Speed up!");
     clicker = 0;
     // alert=function() {};
@@ -58,6 +59,9 @@ function clicked(){
      var $color = '#'+Math.round(0xffffff*Math.random()).toString(16);
     $('.circle').eq($random)
     .css('background-color', $color)
+    var $newSize = ((Math.random()*40) + 50).toFixed();
+    $('.circle').eq($random)
+    .css({'background-color': $color, 'width': $newSize + 'px', 'height': $newSize + 'px'})
     .show()
     .click(function(){
       $(this).css('background-color', 'white');

@@ -36,7 +36,7 @@ nav{
   margin-top: 50px;
 }
 
-#game-info{
+#directions{
 
   float: left;
   padding-right: 30px;
@@ -52,9 +52,14 @@ span{
 
 #score{
   padding-left: 20px;
+  padding-right: 30px;
 }
 
-#pause{
+#level{
+  padding-left: 20px;
+}
+
+#levelNum{
   padding-left: 20px;
 }
 
