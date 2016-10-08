@@ -1,5 +1,5 @@
 body {
- /* display: flex;
+/*  display: flex;
   justify-content: center;
   align-items: center;*/
 
@@ -34,6 +34,14 @@ nav{
   flex-direction: row;
   justify-content: center;
   margin-top: 50px;
+}
+
+#playerinfo{
+  width: 50px;
+
+}
+#forminfo{
+   padding-right: 30px;
 }
 
 #directions{

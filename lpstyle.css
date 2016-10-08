@@ -1,0 +1,121 @@
+body{
+  background-image: url("background.jpg");
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+#topleft{
+/*  text-align: left;*/
+  border: 1px solid rgba(255,255,255,0.8);
+  border-radius: 6px;
+  margin-left: 20px;
+  margin-top: 10px;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+}
+#topright{
+  color: white;
+  display: inline-block;
+  font-size: 10px;
+  padding-left: 940px;
+}
+#topright2{
+  display: inline-block;
+  color: white;
+  font-size: 10px;
+  padding-left: 40px;
+}
+#container{
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+  /*position: relative;*/
+  max-width: 500px;
+  height: 550px;
+  text-align: center;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 3px;
+}
+#logo{
+  display: center;
+  padding-top: 30px;
+
+}
+#heading{
+  margin-top: 30px;
+  font-weight: bolder;
+}
+#subheading{
+  margin-top: -15px;
+  color: gray;
+}
+#coupon{
+  margin-top: 25px;
+}
+#name{
+  text-align: center;
+  font-size: 20px;
+  margin-top: 35px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid lightgray;
+}
+#submit{
+  text-align: center;
+  font-size: 20px;
+  margin-top: 8px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px;
+  color: white;
+  background-color: #43B02A;
+}
+#account{
+  color: gray;
+
+}
+#login{
+  text-decoration: none;
+}
+
+#free{
+  margin-top: 20px;
+  margin
+}
+footer{
+  margin-top: 60px;
+  /*position: absolute;*/
+  color: white;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer{
+  font-size: 7px;
+}
+#terms{
+  /*margin-top: 5px;*/
+  font-size: 13px;
+}
+p{
+  display: inline;
+  padding: 8px;
+  font-size: 14px;
+}
+a{
+  color: white;
+}
+#icons{
+  margin-top: 15px;
+  padding-left: 40px;
+}
