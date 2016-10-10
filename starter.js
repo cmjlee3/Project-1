@@ -1,36 +1,25 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-console.log("game!");
+document.addEventListener('DOMContentLoaded', function(event) {
+console.log('game!');
 
 
 // Below makes it so when you hover over directions the info appears as well as dissapears when you are no longer hovering.
 
-$( "#directions" ).hover(
+$( '#directions' ).hover(
   function() {
-    $( this ).append( $( "<span><br>1. Press Start<br> 2. Click the dots!<br> 3. Three strikes you're out!</span>" ) );
+    $( this ).append( $( '<span><br>1. Press Start<br> 2. Click the dots!<br> 3. Dots may shift ;)</span>' ) );
   }, function() {
-    $( this ).find( "span:last" ).remove();
+    $( this ).find( 'span:last' ).remove();
   }
 );
 
-// var player = ('#playerinfo')
-
-// $( "#forminfo" ).hover(
-//   function() {
-//     $( this ).append(('#playerinfo') );
-//   }, function() {
-//     $( this ).find(player).remove();
-//   }
-// );
-
 // Below allows the name typed in on the landing page to carry over to the game page
-var guestInfo = window.location.search.substring(1).split("=");
+var guestInfo = window.location.search.substring(1).split('=');
 var guestInfo2 = guestInfo[1].split('+');
 
 function playerInfo(){
   document.querySelector('#playerinfo').setAttribute('value', guestInfo2);
 }
 
-// var form = document.querySelector('.formdone');
 playerInfo();
 
 
@@ -41,7 +30,6 @@ function clickCircle(){
    $('.button').fadeOut('3000');
    $('this').remove();
    timed();
-
   });
 }
 
@@ -60,23 +48,13 @@ function timed(){
   else if (clicker === 10){
     levelCounter++;
     $('#levelNum').html(function(i, val) { return +val+1 })
-    alert("Level " + levelCounter + ": Speed up!");
+    alert('Level ' + levelCounter + ': Speed up!');
     clicker = 0;
     // alert=function() {};
     clearInterval(idNum);
     clicked();
   }
 }
-
-// function gameOver(){
-//   if(circlesOut===5){
-//     alert("Too many " + circlesOut + ", Game Over!!!");
-//     circlesOut = 0;
-//     clearInterval(idNum);
-//     clicked();
-//     console.log("NICE");
-//   }
-// }
 
 
 // This function sets a time interval for a single div to be randomly selected and then randomly assigned a color at a rate of 1.1 seconds. The latter part makes it so that when this specific div is clicked it turns to white and also adds a point to the score but stops adding points after that one click to the specific div has occured. It also increases the speed based on levelcounter progression.
@@ -103,8 +81,6 @@ function clicked(){
       // circlesOut--;
       timed()
       })
-
-
     },700 / levelCounter + 400);
   // gameOver();
   };
