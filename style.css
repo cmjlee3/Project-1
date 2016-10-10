@@ -14,8 +14,6 @@ body {
   flex-wrap: wrap;
   padding-left:200px;
   width: 1000px;
-  overflow: hidden;
-  white-space: nowrap;
   /*background-color: black;*/
 }
 
@@ -57,9 +55,8 @@ nav{
 span{
   color:rgb(290,52,103);
   /*font-style: italic;*/
-  position: absolute;
+/*  position: absolute;*/
   text-align: center;
-
 }
 
 #score{

@@ -70,6 +70,8 @@ function clicked(){
       $('.circle').eq($random)
       .css('background-color', $color)
       var $newSize = ((Math.random()*40) + 50).toFixed();
+      // toFixed() converts the float to a string representing the number with a specified amount of digits after the decimal.
+      // toString(16) converts it to a hex base to produce the A-F range
       $('.circle').eq($random)
       .css({'background-color': $color, 'width': $newSize + 'px', 'height': $newSize + 'px'})
       .show()
