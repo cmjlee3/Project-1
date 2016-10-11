@@ -1,162 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>D O T S</title>
-    <link rel='stylesheet' href='style.css' media='screen' title='no title' charset='utf-8'>
-      <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js'></script>
-      <script src='starter.js' charset='utf-8'></script>
+  <title>Instacart</title>
+    <link rel='stylesheet' href='lpstyle.css' media='screen' title='no title' charset='utf-8'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
 </head>
-  <body>
 
-<!-- CREATE FORM AND DO THE SAME THING AS DIRECTIONS TO HOVER AND APPEAR FOR INFO -->
-   <!--  <div class='page'> -->
+<body>
+  <header>
+    <div class='pagetwo'>
+      <div id='topleft'>
+        Become a Shopper
+      </div>
+      <div id='topright'>
+        <h2> How Instacart Works</h2>
+      </div>
+      <div id='topright2'>
+        <h2>Log In</h2>
+      </div>
+  </header>
 
-      <nav>
-        <form id='nameForm' class='formdone' action='http://localhost:3000/showForm' method='post'>
-          <div id='forminfo'>
-          Welcome <input type='text' id='playerinfo' name='pleasework'>
-          </div>
-        </form>
+  <div id='container'>
 
-          <div id='directions'>
-            Directions
-          </div>
-          <div>
-            Score
-          </div>
-          <div id='score'>
-            0
-          </div>
-          <div id='level'>
-            Level
-          </div>
-          <div id='levelNum'>
-            1
-          </div>
-      </nav>
+    <div id='logo'>
+      <img src='logo.png'>
+    </div>
+    <div id='heading'>
+      <h2>Groceries delivered in 1 hour
+    </div>
+    <div id='subheading'>
+      <h3>Enter your first name and hit submit!</h3>
+    </div>
+    <div id='coupon'>
+      <img src='coupon.png'>
+    </div>
+    <form action='gamepage.html' id='info' method='get'>
+        <input type='text' style='width: 305px' id='name' name='name' placeholder='First Name :)'>
+        <button type='submit' style='width: 330px' id='submit'>Submit</button>
+    </form>
 
-      <br>
-        <div class='landingcontainer'>
-          <button type= 'button' type='submit' id='start' class='button' style='font-family: "Times"'> S T A R T</button>
-        </div>
-      <br>
+      <div id='account'>Already have an account?<a id='login' href="">Log in</a></div>
 
-    <div id='backboard'>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
-      <div class='circle'></div>
+    <div id='free'>
+      <img src='freedelivery.png'>
     </div>
 
- <!--    </div> -->
+  </div>
 
-  </body>
+  <footer>
+    <div id='footer'>
+      <p>Help</p>
+      <p>Locations</p>
+      <p>Careers</p>
+      <p>Blog</p>
+      <p>Lists & Recipes</p>
+      <p>Contact</p>
+      <p>Press</p>
+      <p>Privacy</p>
+      <p>Terms</p>
+      <p>Become a Shopper</p>
+      <p>iOS app</p>
+      <p>Android app</p><br>
+    </div>
+    <div id='terms'>
+      *Additional terms apply on free delivery.
+      <a href="">Learn More</a>
+      <img src='icons.png' id='icons'>
+
+    </div>
+    </footer>
+  </div>
+
+</body>
 </html>
